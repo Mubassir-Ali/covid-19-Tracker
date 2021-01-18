@@ -5,7 +5,17 @@ justify-content: center;
 }
 
 .chart{
-  width: 720px;
+  width: 100%;
+}
+
+.container{
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 10rem auto;
+
+
 }
 
 .App-logo {

@@ -3,7 +3,7 @@ import datasets from "./datasets";
 import { Bar } from "react-chartjs-2";
 
 export const Covid19 = () => {
-//   const covidData = datasets[0];
+
 
   const data = {
     labels: [

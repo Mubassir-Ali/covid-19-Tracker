@@ -1,14 +1,16 @@
 import "./App.css";
-import BarChart from "./barChart";
-import Data from './Components/Data'
+
 import {Covid19} from './Components/Covid19'
+import {CovidData} from './Components/CovidData'
 
 
 function App() {
   return (
     <div className="App">
     <div className='chart'>
-    <Covid19/>
+ 
+    <CovidData/>
+
 
     </div>
     

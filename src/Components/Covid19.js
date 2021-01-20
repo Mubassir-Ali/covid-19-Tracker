@@ -21,10 +21,11 @@ export const Covid19 = () => {
 
     for (let i = 0; i < Globdata.Countries.length; i++) {
       // delete Globdata.Countries[i].Premium;
-      arr.push(Globdata.Countries[i].TotalConfirmed);
+      arr.push(Globdata.Countries[i].TotalDeaths);
       countr.push(Globdata.Countries[i].Country);
     }
 
+    console.log(Globdata);
 
     return(<div>
     {setGloblData(arr)}
@@ -45,10 +46,11 @@ export const Covid19 = () => {
   // console.log(az);
   const data = {
     // labels: ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola"],
-    labels: countr.slice(0,100),
+    labels: countr.slice(100,180),
     datasets: [
       {
-        data: arr.slice(0,100),
+        data: arr.slice(100,180),
+        label: 'Total Deaths',
         // data: [54062, 67982, 104092, 9083, 18926],
         backgroundColor: "rgba(255,99,132,0.5)",
         borderColor: "rgba(255,99,132,0.5)",

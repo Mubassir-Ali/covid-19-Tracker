@@ -11,10 +11,14 @@ function App() {
     <div className="App">
     <div className='chart'>
  
-    <CovidData/>
+  
     <Manu/>
     <div className='container'>
-    <SpacingGrid/>
+    {/* <SpacingGrid/> */}
+    <Covid19></Covid19>
+    {/* <CovidData></CovidData> */}
+
+    
 
     </div>
     </div>

@@ -1,21 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+let data;
+let arr=[];
+const CovidData = () => {
+  const [globalData, setGloblData] = useState({});
 
-export const CovidData = () => {
   useEffect(() => {
     async function getData() {
-      const response = await fetch('https://covid19-api.org/api/status');
-      let data =await response.json();
-        console.log(data[0]);
+      let response = await fetch("https://api.covid19api.com/summary");
+      data = await response.json();
 
-        delete data[0].country
-        delete data[0].last_update
-      
+      // const global= data.Global;
+      // const name= Object.keys(data.Countries);
+      // const val=Object.values(data.Countries);
+
+      for (let i = 0; i < data.Countries.length; i++) {
+        delete data.Countries[i].Premium;
+        arr.push(data.Countries[i].TotalConfirmed);
+
+        
+      }
+
+
+
+
+      setGloblData(data);
     }
-    getData()
 
-
- 
+    getData();
   }, []);
+
+  console.log(arr);
 
   return <div></div>;
 };
+
+export { CovidData };
